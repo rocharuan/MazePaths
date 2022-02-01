@@ -6,10 +6,10 @@ from timeit import timeit
 from aStarModule import aStar
 
 #Constantes
-TEMPO = 10
+TEMPO = 50
 MAPA_X = 10
 MAPA_Y = 10
-NUMERO_SOLUCOES = 100; #0 =  somente uma solução, quanto maior mais soluções irão aparecer
+NUMERO_SOLUCOES = 0; #0 =  somente uma solução, quanto maior mais soluções irão aparecer
 
 #Mapa
 m = maze(MAPA_X, MAPA_Y)

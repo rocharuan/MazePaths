@@ -8,9 +8,11 @@ def dijkstra(m, *h, start=None):
     unvisited[start] = 0
     visited = {}
     revPath = {}
+    searchPath = [start]
     while unvisited:
         currCell = min(unvisited, key=unvisited.get)
         visited[currCell] = unvisited[currCell]
+        searchPath.append(currCell)
         if currCell == m._goal:
             break
         for d in 'EWNS':
@@ -41,4 +43,4 @@ def dijkstra(m, *h, start=None):
         fwdPath[revPath[cell]] = cell
         cell = revPath[cell]
 
-    return fwdPath, visited[m._goal]
+    return fwdPath, searchPath
